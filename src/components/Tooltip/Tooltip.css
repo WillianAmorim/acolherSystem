@@ -1,0 +1,10 @@
+
+.tooltip-text {
+  transition: opacity 200ms, top 200ms;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+  top: 150%;
+}

@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  multhabilit-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: multhabilit-app
+    ports:
+      - "90:90"
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+    networks:
+      - multihabilitsystem_default  # Adiciona à rede correta
+
+networks:
+  multihabilitsystem_default:
+    external: true  # Usa a rede já existente

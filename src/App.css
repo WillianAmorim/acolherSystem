@@ -1,0 +1,10 @@
+
+
+.fc .fc-button {
+    @apply bg-indigo-500 text-white hover:bg-indigo-600;
+  }
+  
+  .fc .fc-daygrid-day-number {
+    @apply text-sm text-gray-700;
+  }
+  

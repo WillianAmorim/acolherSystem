@@ -1,0 +1,4 @@
+
+.popup {
+  transition: opacity 200ms, top 200ms;
+}

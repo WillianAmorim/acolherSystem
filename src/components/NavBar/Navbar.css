@@ -1,0 +1,8 @@
+
+.submenu {
+  display: none;
+}
+
+.has-options:hover .submenu {
+  display: block;
+}

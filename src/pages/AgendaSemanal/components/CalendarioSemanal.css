@@ -1,0 +1,132 @@
+/* CalendarioSemanal.css */
+/* Cabeçalho do calendário */
+
+/* Ocultar a linha "Todo o dia" */
+
+
+.fc-toolbar {
+    @apply bg-gray-800 text-white py-2 px-4 rounded-t-lg;
+    /* Estilo geral do cabeçalho */
+}
+
+.fc-toolbar-title {
+    @apply text-lg font-semibold text-center;
+    /* Estilo do título */
+}
+
+.fc-button {
+    @apply bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 focus:ring-2 focus:ring-indigo-400;
+    /* Estilo dos botões */
+}
+
+.fc-button-primary {
+    @apply bg-indigo-500 text-white;
+    /* Botão principal (ex: 'Hoje') */
+}
+
+.fc-button-group {
+    @apply space-x-2;
+    /* Espaçamento entre os botões */
+}
+
+
+/* Grade de dias */
+.fc .fc-daygrid-day {
+    @apply p-2 text-center bg-white border-b border-gray-300 cursor-pointer transition-all;
+}
+
+.fc .fc-daygrid-day-number {
+    @apply text-sm text-gray-700 font-medium;
+    /* Números dos dias */
+}
+
+/* .fc .fc-daygrid-day.fc-day-today { */
+    /* @apply bg-indigo-100 border-indigo-500; */
+    /* Destacar o dia atual */
+/* } */
+
+.fc .fc-daygrid-day.fc-day-other {
+    @apply text-gray-400;
+    /* Dias fora do mês */
+}
+
+/* Estilo dos eventos */
+.fc-event {
+    @apply bg-indigo-500 text-white rounded-md shadow-md cursor-pointer transition-all;
+    font-size: 5px;
+    /* background-color: red; */
+}
+
+.fc-event:hover {
+    @apply bg-indigo-600;
+    /* Hover em eventos */
+}
+
+/* .fc-event.fc-event-start, */
+/* .fc-event.fc-event-end { */
+    /* @apply text-xs font-semibold; */
+    /* Evento de início e fim */
+/* } */
+
+.fc-event.fc-event-title {
+    @apply font-medium;
+    /* Título do evento */
+}
+
+/* Navegação (visualização do calendário) */
+.fc .fc-view {
+    @apply shadow-lg rounded-lg;
+}
+
+.fc .fc-view.fc-dayGridMonth-view {
+    @apply border-2 border-gray-200;
+}
+
+.fc .fc-daygrid-week-number {
+    @apply text-xs text-gray-500;
+    /* Números das semanas */
+}
+
+.fc .fc-daygrid-day.fc-day-other {
+    @apply text-gray-400;
+    /* Dias fora do mês */
+}
+
+/* Modal de evento */
+.fc-popover {
+    @apply bg-white p-4 rounded-md shadow-xl;
+    /* Estilo geral */
+}
+
+.fc-popover-header {
+    @apply text-xl font-semibold text-gray-700;
+    /* Cabeçalho */
+}
+
+.fc-popover-body {
+    @apply text-sm text-gray-600;
+    /* Corpo do modal */
+}
+
+.fc-popover-footer {
+    @apply text-right mt-2;
+    /* Rodapé do modal */
+}
+
+
+/*  */
+/* Ocultar a linha "All Day" sem afetar a coluna de horários */
+.fc-timegrid-all-day {
+    display: none !important;
+}
+
+/* Ajustar o espaçamento da coluna de horários */
+.fc-timegrid-slot-label {
+    padding-top: 0 !important;
+    /* Ajuste para não afetar os horários */
+}
+
+.fc-v-event {
+    height: 45px;
+    border: none;
+}
