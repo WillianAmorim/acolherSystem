@@ -35,7 +35,7 @@ const Pacientes: React.FC = () => {
         }
 
         const { data } = await axios.get<{ original: Paciente[] }>(
-          "https://sistema.clinicamultihabilit.com.br/api/pacientes",
+          "https://sistema.clinicaacolherslz.com.br/api/pacientes",
           {
             headers: {
               Authorization: `Bearer ${token}`,

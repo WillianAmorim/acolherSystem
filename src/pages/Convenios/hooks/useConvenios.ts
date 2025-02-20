@@ -23,7 +23,7 @@ const useConvenios = () => {
       const token = localStorage.getItem("authToken");
       const headers = { Authorization: `Bearer ${token}` };
 
-      const response = await axios.get("https://sistema.clinicamultihabilit.com.br/api/convenios", { headers });
+      const response = await axios.get("https://sistema.clinicaacolherslz.com.br/api/convenios", { headers });
       setConvenios(response.data.original || []); // Garante que convenios sempre será um array
       setError(null);
     } catch (err) {
@@ -44,7 +44,7 @@ const useConvenios = () => {
       const token = localStorage.getItem("authToken");
       const headers = { Authorization: `Bearer ${token}` };
 
-      await axios.post("https://sistema.clinicamultihabilit.com.br/api/convenios", newConvenio, { headers });
+      await axios.post("https://sistema.clinicaacolherslz.com.br/api/convenios", newConvenio, { headers });
       toast.success("Convênio cadastrado com sucesso!");
       fetchConvenios(); // Atualiza os convênios após cadastro
     } catch (err) {

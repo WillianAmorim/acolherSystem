@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://sistema.clinicamultihabilit.com.br/api";
+const API_URL = "https://sistema.clinicaacolherslz.com.br/api";
 
 // Obtém o token de autenticação armazenado
 const getAuthHeaders = () => {

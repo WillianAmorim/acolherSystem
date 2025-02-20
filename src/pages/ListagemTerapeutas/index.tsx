@@ -72,7 +72,7 @@ const ListagemTerapeutas = () => {
             try {
                 const token = localStorage.getItem("authToken");
                 const { data: terapeutas } = await axios.get(
-                    "https://sistema.clinicamultihabilit.com.br/api/medicos",
+                    "https://sistema.clinicaacolherslz.com.br/api/medicos",
                     {
                         headers: {
                             Authorization: `Bearer ${token}`,
@@ -132,7 +132,7 @@ const ListagemTerapeutas = () => {
                 setLoading(true); // Inicia o carregamento
                 try {
                     const token = localStorage.getItem("authToken");
-                    await axios.delete(`https://sistema.clinicamultihabilit.com.br/api/medicos/${terapeuta.id}`, {
+                    await axios.delete(`https://sistema.clinicaacolherslz.com.br/api/medicos/${terapeuta.id}`, {
                         headers: {
                             Authorization: `Bearer ${token}`,
                         },
@@ -155,7 +155,7 @@ const ListagemTerapeutas = () => {
             const token = localStorage.getItem("authToken");
             if (selectedTerapeuta) {
                 await axios.put(
-                    `https://sistema.clinicamultihabilit.com.br/api/medicos/${selectedTerapeuta.id}`,
+                    `https://sistema.clinicaacolherslz.com.br/api/medicos/${selectedTerapeuta.id}`,
                     selectedTerapeuta,
                     {
                         headers: {
@@ -259,7 +259,7 @@ const ListagemTerapeutas = () => {
         try {
             console.log(dadosRequest, 'dadosrequest')
             const token = localStorage.getItem("authToken");
-            await axios.post("https://sistema.clinicamultihabilit.com.br/api/horarios/adicionar-feriado", { data: selectedDateDelete,
+            await axios.post("https://sistema.clinicaacolherslz.com.br/api/horarios/adicionar-feriado", { data: selectedDateDelete,
                 observacao: motivoDateDelete }, {
                 headers: { Authorization: `Bearer ${token}` },
             });

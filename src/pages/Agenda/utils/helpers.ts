@@ -87,7 +87,7 @@ export const handleConfirmAppointment = async (row: any, navigate: ReturnType<ty
     try {
         const token = localStorage.getItem("authToken");
         await axios.put(
-            `https://sistema.clinicamultihabilit.com.br/api/agendamentos/${row.id}`,
+            `https://sistema.clinicaacolherslz.com.br/api/agendamentos/${row.id}`,
             statusTrue,
             {
                 headers: {
@@ -123,7 +123,7 @@ export const handleCancelAppointment = async (row: any, navigate: ReturnType<typ
     console.log(row)
     try {
         const token = localStorage.getItem("authToken");
-        await axios.delete(`https://sistema.clinicamultihabilit.com.br/api/agendamentos/${row.id}`, {
+        await axios.delete(`https://sistema.clinicaacolherslz.com.br/api/agendamentos/${row.id}`, {
             headers: {
                 Authorization: `Bearer ${token}`,
             },

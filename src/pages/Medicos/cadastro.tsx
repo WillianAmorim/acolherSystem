@@ -35,7 +35,7 @@ const CadastroMedico: React.FC = () => {
         if (!token) throw new Error("Token não encontrado");
 
         const response = await axios.get<Usuario[]>(
-          "https://sistema.clinicamultihabilit.com.br/api/usuarios",
+          "https://sistema.clinicaacolherslz.com.br/api/usuarios",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -121,7 +121,7 @@ const CadastroMedico: React.FC = () => {
       if (usuarioEncontrado?.medico) {
         // Atualizar terapeuta existente (PUT)
         const medicoId = usuarioEncontrado.medico.id;
-        await axios.put(`https://sistema.clinicamultihabilit.com.br/api/medicos/${medicoId}`, dadosMedico, {
+        await axios.put(`https://sistema.clinicaacolherslz.com.br/api/medicos/${medicoId}`, dadosMedico, {
           headers: { Authorization: `Bearer ${token}` },
         });
         toast.success("Terapeuta atualizado com sucesso!", {
@@ -139,13 +139,13 @@ const CadastroMedico: React.FC = () => {
   
         // Envia a requisição para atualizar o usuário
         await axios.put(
-          `https://sistema.clinicamultihabilit.com.br/api/usuarios/${usuarioId}`,
+          `https://sistema.clinicaacolherslz.com.br/api/usuarios/${usuarioId}`,
           dadosUsuarioAtualizado,
           { headers: { Authorization: `Bearer ${token}` } }
         );
   
         // Criar novo terapeuta (POST)
-        await axios.post("https://sistema.clinicamultihabilit.com.br/api/medicos", dadosMedico, {
+        await axios.post("https://sistema.clinicaacolherslz.com.br/api/medicos", dadosMedico, {
           headers: { Authorization: `Bearer ${token}` },
         });
   

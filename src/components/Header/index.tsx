@@ -21,7 +21,7 @@ export default function Header({ isMobile = false }: HeaderProps) {
 
   //     // Faz a chamada para o endpoint de logout
   //     await axios.post(
-  //       'https://sistema.clinicamultihabilit.com.br/api/logout',
+  //       'https://sistema.clinicaacolherslz.com.br/api/logout',
   //       {},
   //       {
   //         headers: {

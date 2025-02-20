@@ -16,7 +16,7 @@ const useConvenioDetails = (convenioId: number | undefined) => {
             try {
                 const token = localStorage.getItem("authToken");
                 const { data } = await axios.get(
-                    `https://sistema.clinicamultihabilit.com.br/api/convenios/${convenioId}`,
+                    `https://sistema.clinicaacolherslz.com.br/api/convenios/${convenioId}`,
                     {
                         headers: {
                             Authorization: `Bearer ${token}`,

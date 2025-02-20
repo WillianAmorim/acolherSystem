@@ -51,7 +51,11 @@ const AgendamentoForm = () => {
                         onChange={(e) => agendamentoState.setSelectedUnidade(e.target.value)}
                     >
                         <option value="">Selecione uma unidade</option>
-                        <option value="multi-habilit">Multi Habilit</option>
+                        <option value="prime">Prime</option>
+                        <option value="matriz">Matriz</option>
+                        <option value="renascenca">Renascença</option>
+                        <option value="cohatrac">Cohatrac</option>
+                        <option value="cohafuma">Cohafuma</option>
                     </select>
                 </div>
 

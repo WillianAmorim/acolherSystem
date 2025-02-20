@@ -23,7 +23,7 @@ const useProcedimentos = () => {
         const fetchProcedimentos = async () => {
             try {
                 const token = localStorage.getItem("authToken");
-                const { data } = await axios.get("https://sistema.clinicamultihabilit.com.br/api/procedimentos", {
+                const { data } = await axios.get("https://sistema.clinicaacolherslz.com.br/api/procedimentos", {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },

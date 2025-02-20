@@ -37,12 +37,12 @@ const Faturamento = () => {
                 const token = localStorage.getItem("authToken");
 
                 const { data: terapeutasData } = await axios.get(
-                    "https://sistema.clinicamultihabilit.com.br/api/medicos",
+                    "https://sistema.clinicaacolherslz.com.br/api/medicos",
                     { headers: { Authorization: `Bearer ${token}` } }
                 );
 
                 const { data: conveniosData } = await axios.get(
-                    "https://sistema.clinicamultihabilit.com.br/api/convenios",
+                    "https://sistema.clinicaacolherslz.com.br/api/convenios",
                     { headers: { Authorization: `Bearer ${token}` } }
                 );
 
@@ -83,7 +83,7 @@ const Faturamento = () => {
         }
     };
 
-    const selectedQueryRequest = (url:string) => {
+    const selectedQueryRequest = (url: string) => {
         if (selectedDataInicial && !selectedDataFinal) {
             return `${url}?data_inicio=${selectedDataInicial}`
         } else if (selectedDataInicial && selectedDataFinal) {
@@ -98,25 +98,25 @@ const Faturamento = () => {
             toast.error("Selecione ambas as opções antes de filtrar.", { position: "bottom-right" });
             return;
         }
-    
+
         setLoadingFiltro(true);
-    
+
         // Verifica se selectedOptionFirst não é null
         if (selectedOptionFirst === null) {
             toast.error("Opção inválida selecionada.", { position: "bottom-right" });
             setLoadingFiltro(false);
             return;
         }
-    
-        const baseUrl = `https://sistema.clinicamultihabilit.com.br/api/financeiro/faturamento/${selectedOptionFirst.value}/${selectedOptionSecond.value}`;
-    
+
+        const baseUrl = `https://sistema.clinicaacolherslz.com.br/api/financeiro/faturamento/${selectedOptionFirst.value}/${selectedOptionSecond.value}`;
+
         try {
             const token = localStorage.getItem("authToken");
-    
+
             const { data } = await axios.get(selectedQueryRequest(baseUrl), {
                 headers: { Authorization: `Bearer ${token}` },
             });
-    
+
             setMostrarDetalhesFaturamento(true);
             setFaturamento(data);
         } catch (err) {
@@ -125,7 +125,7 @@ const Faturamento = () => {
             setLoadingFiltro(false);
         }
     };
-    
+
     return (
         <div className="p-8 bg-[#FFF] min-h-screen">
             {loadingInicial ? (
@@ -161,7 +161,12 @@ const Faturamento = () => {
                                 <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="">Unidade</label>
                                 <select value={selectedUnidade} onChange={(e) => setSelectedUnidade(e.target.value)} name="" id="" className="border p-2 rounded-md">
                                     <option value="">Selecione uma unidade</option>
-                                    <option value="multi-habilit">Multi Habilit</option>
+                                    <option value="">Selecione uma unidade</option>
+                                    <option value="prime">Prime</option>
+                                    <option value="matriz">Matriz</option>
+                                    <option value="renascenca">Renascença</option>
+                                    <option value="cohatrac">Cohatrac</option>
+                                    <option value="cohafuma">Cohafuma</option>
                                 </select>
                             </div>
 
@@ -189,7 +194,7 @@ const Faturamento = () => {
                         </div>
 
                         <div className="">
-                            
+
                         </div>
 
                         <button

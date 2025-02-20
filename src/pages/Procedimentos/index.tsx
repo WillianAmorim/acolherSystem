@@ -59,7 +59,7 @@ const Procedimentos = () => {
             const token = localStorage.getItem("authToken");
             if (!token) throw new Error("Token não encontrado")
 
-            await axios.post("https://sistema.clinicamultihabilit.com.br/api/procedimentos", dadosProcedimento, {
+            await axios.post("https://sistema.clinicaacolherslz.com.br/api/procedimentos", dadosProcedimento, {
                 headers: { Authorization: `Bearer ${token}` },
             });
 

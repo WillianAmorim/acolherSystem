@@ -45,7 +45,7 @@ const Convenios = () => {
             try {
                 const token = localStorage.getItem("authToken");
                 const { data: conveniosRequest } = await axios.get(
-                    "https://sistema.clinicamultihabilit.com.br/api/convenios",
+                    "https://sistema.clinicaacolherslz.com.br/api/convenios",
                     {
                         headers: {
                             Authorization: `Bearer ${token}`,
@@ -128,7 +128,7 @@ const Convenios = () => {
             if (result.isConfirmed) {
                 try {
                     const token = localStorage.getItem("authToken");
-                    await axios.delete(`https://sistema.clinicamultihabilit.com.br/api/convenios/${convenio.id}`, {
+                    await axios.delete(`https://sistema.clinicaacolherslz.com.br/api/convenios/${convenio.id}`, {
                         headers: {
                             Authorization: `Bearer ${token}`,
                         },

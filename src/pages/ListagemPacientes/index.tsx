@@ -77,7 +77,7 @@ const ListagemPacientes = () => {
             try {
                 const token = localStorage.getItem("authToken");
                 const { data: pacientes } = await axios.get(
-                    "https://sistema.clinicamultihabilit.com.br/api/pacientes",
+                    "https://sistema.clinicaacolherslz.com.br/api/pacientes",
                     {
                         headers: {
                             Authorization: `Bearer ${token}`,
@@ -126,7 +126,7 @@ const ListagemPacientes = () => {
                 setLoading(true); // Inicia o carregamento
                 try {
                     const token = localStorage.getItem("authToken");
-                    await axios.delete(`https://sistema.clinicamultihabilit.com.br/api/pacientes/${paciente.id}`, {
+                    await axios.delete(`https://sistema.clinicaacolherslz.com.br/api/pacientes/${paciente.id}`, {
                         headers: {
                             Authorization: `Bearer ${token}`,
                         },
@@ -149,7 +149,7 @@ const ListagemPacientes = () => {
             const token = localStorage.getItem("authToken");
             if (selectedPaciente) {
                 await axios.put(
-                    `https://sistema.clinicamultihabilit.com.br/api/pacientes/${selectedPaciente.id}`,
+                    `https://sistema.clinicaacolherslz.com.br/api/pacientes/${selectedPaciente.id}`,
                     selectedPaciente,
                     {
                         headers: {

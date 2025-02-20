@@ -183,7 +183,7 @@ const CadastroConvenio = () => {
             if (!token) throw new Error("Token não encontrado");
             checkDate(vencimentoContrato);
 
-            await axios.post("https://sistema.clinicamultihabilit.com.br/api/convenios", dadosCadastroConvenio, {
+            await axios.post("https://sistema.clinicaacolherslz.com.br/api/convenios", dadosCadastroConvenio, {
                 headers: { Authorization: `Bearer ${token}` },
             });
 

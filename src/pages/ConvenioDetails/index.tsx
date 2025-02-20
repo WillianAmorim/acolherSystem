@@ -76,7 +76,7 @@ const ConvenioDetails = () => {
         try {
             const token = localStorage.getItem("authToken");
             const { data } = await axios.post(
-                "https://sistema.clinicamultihabilit.com.br/api/procedimentos",
+                "https://sistema.clinicaacolherslz.com.br/api/procedimentos",
                 {
                     codigo: procedimentoData.codigo,
                     nome: procedimentoData.nome,
@@ -111,7 +111,7 @@ const ConvenioDetails = () => {
             try {
                 const token = localStorage.getItem("authToken");
                 const { data } = await axios.get(
-                    `https://sistema.clinicamultihabilit.com.br/api/convenios/${convenio.id}/procedimentos`,
+                    `https://sistema.clinicaacolherslz.com.br/api/convenios/${convenio.id}/procedimentos`,
                     {
                         headers: {
                             Authorization: `Bearer ${token}`,

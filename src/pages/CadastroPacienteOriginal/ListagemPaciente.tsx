@@ -34,7 +34,7 @@ const ListagemPacientes: React.FC = () => {
                 }
 
                 const response = await axios.get<{ original: Paciente[] }>(
-                    "https://sistema.clinicamultihabilit.com.br/api/pacientes",
+                    "https://sistema.clinicaacolherslz.com.br/api/pacientes",
                     {
                         headers: {
                             Authorization: `Bearer ${token}`,
@@ -74,7 +74,7 @@ const ListagemPacientes: React.FC = () => {
             }
 
             await axios.delete(
-                `https://sistema.clinicamultihabilit.com.br/api/pacientes/${selectedPaciente.id}`,
+                `https://sistema.clinicaacolherslz.com.br/api/pacientes/${selectedPaciente.id}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,

@@ -67,7 +67,7 @@ const CadastroTerapeuta = () => {
         try {
             // Cadastro do usuário
             await axios.post(
-                "https://sistema.clinicamultihabilit.com.br/api/usuarios",
+                "https://sistema.clinicaacolherslz.com.br/api/usuarios",
                 {
                     ...dadosMedico,
                     sexo: dadosMedico.sexo.charAt(0).toUpperCase() + dadosMedico.sexo.slice(1), // Ajuste para "Masculino" ou "Feminino"

@@ -40,7 +40,7 @@ const ListagemMedicos: React.FC = () => {
         }
 
         const response = await axios.get<{ original: Medico[] }>(
-          "https://sistema.clinicamultihabilit.com.br/api/medicos",
+          "https://sistema.clinicaacolherslz.com.br/api/medicos",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -82,7 +82,7 @@ const ListagemMedicos: React.FC = () => {
         throw new Error("Token não encontrado");
       }
 
-      await axios.delete(`https://sistema.clinicamultihabilit.com.br/api/medicos/${selectedMedico.id}`, {
+      await axios.delete(`https://sistema.clinicaacolherslz.com.br/api/medicos/${selectedMedico.id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

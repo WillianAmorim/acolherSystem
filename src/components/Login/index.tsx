@@ -18,7 +18,7 @@ const Login = () => {
 
         try {
             // Realiza o login
-            const loginResponse = await axios.post('https://sistema.clinicamultihabilit.com.br/api/login', {
+            const loginResponse = await axios.post('https://sistema.clinicaacolherslz.com.br/api/login', {
                 email,
                 password,
             });
@@ -30,7 +30,7 @@ const Login = () => {
             axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
             // Busca os dados do usuário
-            const userResponse = await axios.get('https://sistema.clinicamultihabilit.com.br/api/me');
+            const userResponse = await axios.get('https://sistema.clinicaacolherslz.com.br/api/me');
             const userData = userResponse.data;
 
             // Salva os dados do usuário no localStorage

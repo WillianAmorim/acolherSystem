@@ -50,9 +50,9 @@ const useDashboardData = () => {
         const headers = { Authorization: `Bearer ${token}` };
 
         const [agendamentoRes, medicosRes, pacientesRes] = await Promise.all([
-          axios.get("https://sistema.clinicamultihabilit.com.br/api/agendamentos", { headers }),
-          axios.get("https://sistema.clinicamultihabilit.com.br/api/medicos", { headers }),
-          axios.get("https://sistema.clinicamultihabilit.com.br/api/pacientes", { headers }),
+          axios.get("https://sistema.clinicaacolherslz.com.br/api/agendamentos", { headers }),
+          axios.get("https://sistema.clinicaacolherslz.com.br/api/medicos", { headers }),
+          axios.get("https://sistema.clinicaacolherslz.com.br/api/pacientes", { headers }),
         ]);
 
         console.log(agendamentoRes, 'agendamentoRes');

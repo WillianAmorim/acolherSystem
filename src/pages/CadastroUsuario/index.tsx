@@ -53,7 +53,7 @@ const CadastroUsuario = () => {
 
         try {
             const token = localStorage.getItem("authToken");
-            await axios.post('https://sistema.clinicamultihabilit.com.br/api/usuarios', dadosUsuario, {
+            await axios.post('https://sistema.clinicaacolherslz.com.br/api/usuarios', dadosUsuario, {
                 headers: { Authorization: `Bearer ${token}` },
             });
 

@@ -37,7 +37,7 @@ const ProcedimentosTable: React.FC<ProcedimentosTableProps> = ({
         try {
             const token = localStorage.getItem("authToken");
             await axios.delete(
-                `https://sistema.clinicamultihabilit.com.br/api/procedimentos/${procedimentoToDelete.id}`,
+                `https://sistema.clinicaacolherslz.com.br/api/procedimentos/${procedimentoToDelete.id}`,
                 {
                     headers: { Authorization: `Bearer ${token}` },
                 }

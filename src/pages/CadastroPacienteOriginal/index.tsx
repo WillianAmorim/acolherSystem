@@ -28,7 +28,7 @@ const CadastroPaciente: React.FC = () => {
                 const token = localStorage.getItem("authToken");
                 if (!token) throw new Error("Token não encontrado");
 
-                const { data } = await axios.get("https://sistema.clinicamultihabilit.com.br/api/usuarios", {
+                const { data } = await axios.get("https://sistema.clinicaacolherslz.com.br/api/usuarios", {
                     headers: { Authorization: `Bearer ${token}` },
                 });
 
@@ -105,7 +105,7 @@ const CadastroPaciente: React.FC = () => {
             const token = localStorage.getItem("authToken");
             if (!token) throw new Error("Token não encontrado");
 
-            await axios.post("https://sistema.clinicamultihabilit.com.br/api/pacientes", dadosPaciente, {
+            await axios.post("https://sistema.clinicaacolherslz.com.br/api/pacientes", dadosPaciente, {
                 headers: { Authorization: `Bearer ${token}` },
             });
 

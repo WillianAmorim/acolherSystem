@@ -14,7 +14,7 @@ const Logout = () => {
         const authToken = localStorage.getItem('authToken');
         if (authToken) {
           await axios.post(
-            'https://sistema.clinicamultihabilit.com.br/api/logout',
+            'https://sistema.clinicaacolherslz.com.br/api/logout',
             {},
             {
               headers: {

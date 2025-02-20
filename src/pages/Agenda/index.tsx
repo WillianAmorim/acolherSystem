@@ -24,7 +24,7 @@ const Agenda = () => {
         try {
             const token = localStorage.getItem("authToken");
             const { data: agendamentosRequest } = await axios.get(
-                "https://sistema.clinicamultihabilit.com.br/api/agendamentos",
+                "https://sistema.clinicaacolherslz.com.br/api/agendamentos",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
