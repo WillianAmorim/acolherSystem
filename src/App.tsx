@@ -1,5 +1,5 @@
 import Agenda from './pages/Agenda';
-import Login from './components/Login';
+import {LoginPage} from './pages/Login/index';
 import Agendamento from './pages/Agendamento/index'
 import { Routes, Route, Navigate } from 'react-router-dom';
 // import CadastroUsuario from './pages/CadastroUsuario/index';
@@ -46,7 +46,7 @@ const LayoutWrapper = () => {
 const App = () => {
   return (
     <Routes>
-      <Route path="/login" element={<Login />} />
+      <Route path="/login" element={<LoginPage />} />
       <Route path="/logout" element={<Logout />} />
 
       {/* Rotas protegidas: renderizadas dentro do MainLayout */}
